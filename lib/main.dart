@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 
 void main() {
-  runApp(const GrowSpirit());
+  runApp(const App());
 }
 
-class GrowSpirit extends StatelessWidget {
+class App extends StatelessWidget {
 
-  const GrowSpirit({super.key});
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
