@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grow_spirit/component/header.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,10 +13,8 @@ class LoginPage extends StatefulWidget {
 class _LoginState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("GrowSpirit"),
-      ),
+    return const Scaffold(
+      appBar: Header(),
     );
   }
 }

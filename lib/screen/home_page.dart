@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:grow_spirit/component/header.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -12,10 +13,8 @@ class HomePage extends StatefulWidget {
 class _HomepageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+    return const Scaffold(
+      appBar: Header(),
     );
   }
 }
