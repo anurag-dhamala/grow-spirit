@@ -39,6 +39,7 @@ class _HomepageState extends State<HomePage> {
                     Container(
                       width: MediaQuery.of(context).size.width / 3,
                       height: MediaQuery.of(context).size.height / 2,
+                      alignment: Alignment.center,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black, width: 2.0),
                       ),
@@ -47,10 +48,10 @@ class _HomepageState extends State<HomePage> {
                     const SizedBox(
                       width: 10,
                     ),
-
                     Container(
                       width: MediaQuery.of(context).size.width / 3,
                       height: MediaQuery.of(context).size.height / 2,
+                      alignment: Alignment.center,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black, width: 2.0),
                       ),
@@ -66,24 +67,25 @@ class _HomepageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                        width: MediaQuery.of(context).size.width / 3,
-                        height: MediaQuery.of(context).size.height / 2,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2.0),
-                        ),
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: MediaQuery.of(context).size.height / 2,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 2.0),
+                      ),
                       child: const Text("INFJ"),
                     ),
                     const SizedBox(
                       width: 10,
                     ),
                     Container(
-                        width: MediaQuery.of(context).size.width / 3,
-                        height: MediaQuery.of(context).size.height / 2,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2.0),
-                        ),
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: MediaQuery.of(context).size.height / 2,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 2.0),
+                      ),
                       child: const Text("INTJ"),
-
                     ),
                   ],
                 ))
