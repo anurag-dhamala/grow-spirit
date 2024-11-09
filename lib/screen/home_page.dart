@@ -13,19 +13,19 @@ class HomePage extends StatefulWidget {
 class _HomepageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        appBar: Header(),
+    return Scaffold(
+        appBar: const Header(),
         body: Center(
             child: Column(children: [
-          SizedBox(
-            height: 200,
+          const SizedBox(
+            height: 150,
           ),
-          Text(
+          const Text(
             "What is your personality type ?",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          SizedBox(
-            height: 10,
+          const SizedBox(
+            height: 30,
           ),
           SizedBox(
             width: double.infinity,
@@ -34,13 +34,58 @@ class _HomepageState extends State<HomePage> {
               children: [
                 Expanded(
                     child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [Text("INFP"), Text("INTP")],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: MediaQuery.of(context).size.height / 2,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 2.0),
+                      ),
+                      child: const Text("INFP"),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+
+                    Container(
+                      width: MediaQuery.of(context).size.width / 3,
+                      height: MediaQuery.of(context).size.height / 2,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 2.0),
+                      ),
+                      child: const Text("INTP"),
+                    ),
+                  ],
                 )),
+                const SizedBox(
+                  height: 10,
+                ),
                 Expanded(
                     child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [Text("INTJ"), Text("INFJ")],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 2,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 2.0),
+                        ),
+                      child: const Text("INFJ"),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 2,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 2.0),
+                        ),
+                      child: const Text("INTJ"),
+
+                    ),
+                  ],
                 ))
               ],
             ),
