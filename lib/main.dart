@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:grow_spirit/routes.dart";
 
 void main() {
   runApp(const App());
@@ -10,40 +11,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(title: "GrowSpirit"),
+      routes: Routes.coll,
+      initialRoute: Routes.homePage,
     );
   }
 
-}
-
-class Homepage extends StatefulWidget {
-
-  const Homepage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<Homepage> createState() {
-    return _HomepageState();
-  }
-}
-
-class _HomepageState extends State<Homepage> {
-  
-  @override
-  Widget build(BuildContext context) {
-      return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: const Column(
-          children: [
-            Text("Hello world")
-          ],
-        ),
-      );    
-  }
-  
 }
