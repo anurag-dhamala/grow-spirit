@@ -11,6 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomepageState extends State<HomePage> {
+
+  String selectedType = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +25,7 @@ class _HomepageState extends State<HomePage> {
               height: 150,
             ),
             const Text(
-              "What is your personality type ?",
+              "Choose your personality type",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             const SizedBox(
@@ -39,6 +42,9 @@ class _HomepageState extends State<HomePage> {
                     children: [
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            selectedType = "INFP";
+                          });
                            print("Tapped infp");
                         },
                         child: Container(
@@ -56,6 +62,9 @@ class _HomepageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            selectedType = "INTP";
+                          });
                           print("Tapped intp");
                         },
                         child: Container(
@@ -79,6 +88,9 @@ class _HomepageState extends State<HomePage> {
                     children: [
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            selectedType = "INFJ";
+                          });
                           print("Tapped infj");
                         },
                         child: Container(
@@ -96,6 +108,9 @@ class _HomepageState extends State<HomePage> {
                       ),
                       InkWell(
                         onTap: () {
+                          setState(() {
+                            selectedType = "INTJ";
+                          });
                           print("Tapped intj");
                         },
                         child: Container(

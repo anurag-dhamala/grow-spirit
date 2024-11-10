@@ -6,16 +6,16 @@ void main() {
 }
 
 class App extends StatelessWidget {
-
   const App({super.key});
+
+  final bool isAlreadySet = false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: Routes.coll,
-      initialRoute: Routes.homePage,
+      initialRoute: isAlreadySet ? Routes.homePage : Routes.preSetupPage,
     );
   }
-
 }
