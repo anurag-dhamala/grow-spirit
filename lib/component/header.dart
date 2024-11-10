@@ -7,6 +7,10 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: const Text("GrowSpirit"),
+      actions: <Widget>[
+          IconButton(onPressed: () {
+          }, icon: const Icon(Icons.notifications_active))
+      ],
     );
   }
 
