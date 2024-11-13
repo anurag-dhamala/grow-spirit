@@ -8,13 +8,19 @@ void main() {
 class App extends StatelessWidget {
   const App({super.key});
 
-  final bool isAlreadySet = false;
+  final bool isAlreadySet = true;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: Routes.coll,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white
+        )
+      ),
       initialRoute: isAlreadySet ? Routes.homePage : Routes.preSetupPage,
     );
   }
