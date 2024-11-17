@@ -8,7 +8,7 @@ void main() {
 class App extends StatelessWidget {
   const App({super.key});
 
-  final bool isAlreadySet = true;
+  final bool isAlreadySet = false;
 
   @override
   Widget build(BuildContext context) {

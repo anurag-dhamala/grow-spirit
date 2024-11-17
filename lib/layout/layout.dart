@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:grow_spirit/component/header.dart";
 
 class MainLayout extends StatelessWidget {
   const MainLayout({super.key, required this.childWidget});
@@ -7,9 +8,12 @@ class MainLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(15),
-      child: childWidget,
+    return Scaffold(
+      appBar: const Header(),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(18),
+        child: childWidget,
+      ),
     );
   }
 }
