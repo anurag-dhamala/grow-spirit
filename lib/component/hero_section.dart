@@ -60,9 +60,6 @@ class _HeroSectionState extends State<HeroSection> {
                   child: Container(
                     width: 100,
                     height: 100,
-                    margin: const EdgeInsets.only(
-                      right: 0,
-                    ),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.black, width: 2.0)),

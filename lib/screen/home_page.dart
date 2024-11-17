@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:grow_spirit/component/header.dart";
 import "package:grow_spirit/component/hero_section.dart";
+import "package:grow_spirit/layout/layout.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -16,16 +17,13 @@ class _HomepageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const Header(),
-      body: Container(
-        margin: const EdgeInsets.all(
-          15
-        ),
-        child: const Column(
+    return const Scaffold(
+      appBar: Header(),
+      body: MainLayout(
+        childWidget: Column(
           children: [HeroSection()],
         ),
-      ),
+      )
     );
   }
 }
