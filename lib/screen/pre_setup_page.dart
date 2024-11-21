@@ -12,10 +12,16 @@ class PreSetupPage extends StatefulWidget {
 
 class _PreSetupPageState extends State<PreSetupPage> {
   String selectedType = "";
+  String username = "";
+
+  void onChooseType(String type) {
+    setState(() {
+      selectedType = type;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MainLayout(
       childWidget: Center(
         child: Column(
@@ -42,27 +48,37 @@ class _PreSetupPageState extends State<PreSetupPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        margin: const EdgeInsets.only(right: 10),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2),
-                        ),
-                        child: const Center(
-                          child: Text("Warrior"),
+                      child: InkWell(
+                        onTap: () {
+                          onChooseType("Warrior");
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          margin: const EdgeInsets.only(right: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 2),
+                          ),
+                          child: const Center(
+                            child: Text("Warrior"),
+                          ),
                         ),
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2),
-                        ),
-                        child: const Center(
-                          child: Text("Right warrior"),
+                      child: InkWell(
+                        onTap: () {
+                          onChooseType("Right Warrior");
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 2),
+                          ),
+                          child: const Center(
+                            child: Text("Right warrior"),
+                          ),
                         ),
                       ),
                     )
@@ -75,27 +91,37 @@ class _PreSetupPageState extends State<PreSetupPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        margin: const EdgeInsets.only(right: 10),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2),
-                        ),
-                        child: const Center(
-                          child: Text("Warrior"),
+                      child: InkWell(
+                        onTap: () {
+                          onChooseType("Guru");
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          margin: const EdgeInsets.only(right: 10),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 2),
+                          ),
+                          child: const Center(
+                            child: Text("Guru"),
+                          ),
                         ),
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 2),
-                        ),
-                        child: const Center(
-                          child: Text("Right warrior"),
+                      child: InkWell(
+                        onTap: () {
+                          onChooseType("Bottom Warrior");
+                        },
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 2),
+                          ),
+                          child: const Center(
+                            child: Text("Bottom warrior"),
+                          ),
                         ),
                       ),
                     )
