@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grow_spirit/layout/layout.dart';
+import 'package:hive/hive.dart';
 
 class PreSetupPage extends StatefulWidget {
   const PreSetupPage({super.key});
@@ -14,7 +15,9 @@ class _PreSetupPageState extends State<PreSetupPage> {
   String selectedType = "";
   String username = "";
 
-  void onChooseType(String type) {
+  void onChooseType(String type) async {
+    var box = await Hive.openBox("pre-setup");
+    box.put("selectedType", type);
     setState(() {
       selectedType = type;
     });
