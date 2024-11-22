@@ -17,13 +17,10 @@ class _HomepageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: Header(),
-      body: MainLayout(
+    return const MainLayout(
         childWidget: Column(
           children: [HeroSection()],
         ),
-      )
     );
   }
 }
