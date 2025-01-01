@@ -12,7 +12,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       title: Consumer<ThemeProvider>(builder: (context, value, child) {
-        return Text(value.theme  =="light"? "GrowLight": "GrowDark", style: const TextStyle(
+        return Text(value.theme  =="light"? "Light mode": "Dark mode", style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
             fontSize: 25

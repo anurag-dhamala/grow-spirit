@@ -37,7 +37,7 @@ class _HeroSectionState extends State<HeroSection> {
         const Align(
           alignment: Alignment.centerLeft,
           child: Text(
-            "How are you feeling today ?",
+            "Choose option: ",
             style: TextStyle(fontSize: 24),
           ),
         ),

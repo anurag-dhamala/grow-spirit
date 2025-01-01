@@ -1,7 +1,9 @@
+import "package:camera/camera.dart";
 import "package:flutter/material.dart";
 import "package:grow_spirit/component/header.dart";
 import "package:grow_spirit/component/hero_section.dart";
 import "package:grow_spirit/layout/layout.dart";
+import "package:grow_spirit/component/camera_test.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -18,9 +20,9 @@ class _HomepageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const MainLayout(
-        childWidget: Column(
-          children: [HeroSection()],
-        ),
+      childWidget: Column(
+        children: [HeroSection(), CameraTest()],
+      ),
     );
   }
 }
